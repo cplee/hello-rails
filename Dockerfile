@@ -10,6 +10,8 @@ COPY Gemfile Gemfile.lock ./
 RUN gem install bundler && bundle install --jobs 20 --retry 5
 
 COPY . ./
+RUN rails assets:precompile
+ENV RAILS_ENV=production SECRET_KEY_BASE=blah
 
 EXPOSE 3000
 
