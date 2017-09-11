@@ -1,6 +1,8 @@
 service:
   name: hello-rails
   port: 3000
+  cpu: 256
+  memory: 512
   hostPatterns:
   - hello.*
   healthEndpoint: /
