@@ -1,0 +1,10 @@
+service:
+  name: hello-rails
+  port: 3000
+  hostPatterns:
+  - hello.*
+  healthEndpoint: /
+  pipeline:
+    source:
+      provider: CodeCommit
+      repo: hello-rails
